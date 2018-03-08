@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:task="http://www.springframework.org/schema/task" xmlns="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/tx
+       http://www.springframework.org/schema/tx/spring-tx.xsd
+       http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/task 
+       http://www.springframework.org/schema/task/spring-task.xsd">
+
+	<!-- 通知spring容器通过注解的方式装配bean -->
+	<context:annotation-config />
+
+	<!-- 通知spring容器采用自动扫描机制查找注解的bean -->
+	<context:component-scan base-package="com.xh.task.commons.task" />
+
+	<!-- 定时器开关,配置定时任务的线程池 -->
+	<task:annotation-driven scheduler="myScheduler" />
+	<task:scheduler id="myScheduler" pool-size="5" />
+
+</beans>
