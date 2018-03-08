@@ -20,7 +20,7 @@
 	<context:component-scan base-package="com.xh.task.commons.task" />
 
 	<!-- 定时器开关,配置定时任务的线程池 -->
-	<task:annotation-driven scheduler="myScheduler" />
-	<task:scheduler id="myScheduler" pool-size="5" />
+	<task:annotation-driven scheduler="myTask" />
+	<task:scheduler id="myTask" pool-size="5" />
 
 </beans>

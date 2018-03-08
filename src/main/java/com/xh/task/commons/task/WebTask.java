@@ -3,7 +3,6 @@ package com.xh.task.commons.task;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -11,7 +10,7 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 /**
- * <p>Title: </p>
+ * <p>Title: 定时器</p>
  * <p>Description: </p>
  * 
  * @author H.Yang
